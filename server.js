@@ -37,7 +37,33 @@ app.get("/request", function(req, res) {
         order: 1
         }
     ],
-    files: ['eSignature Product Brief (1).docx']
+    files: ['eSignature Product Brief (1).docx'],
+    documents: [
+        {
+          name: 'eSignature Product Brief (1).docx',
+          form_fields: [{
+            api_id: 'nameId',
+            name: 'name',
+            x: 100,
+            y: 500,
+            height:40,
+            width: 120,
+            page: 1,
+            signer: 1,
+            type: 'text',
+          },{
+            api_id: 'titleId',
+            name: 'title',
+            x: 500,
+            y: 500,
+            height:40,
+            width: 120,
+            page: 1,
+            signer: 1,
+            type: 'text',
+          }]
+        }
+      ]
     };
       
 

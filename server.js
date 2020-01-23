@@ -7,7 +7,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const hellosign = require('hellosign-sdk')({ key: 'f969da3fc2b1fd6a176d9091dd72badae3cc849688ce9f010d19f06852a84022' })
+const hellosign = require('hellosign-sdk')({ key: '' })
 
 app.get("/", function(req, res) {
     res.send('sig with templating!')

@@ -7,7 +7,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const hellosign = require('hellosign-sdk')({ key: '' })
+const hellosign = require('hellosign-sdk')({ key: "f969da3fc2b1fd6a176d9091dd72badae3cc849688ce9f010d19f06852a84022" })
 
 app.get("/", function(req, res) {
     res.send('sig with templating!')
@@ -37,33 +37,28 @@ app.get("/request", function(req, res) {
         order: 1
         }
     ],
-    files: ['eSignature Product Brief (1).docx'],
-    documents: [
-        {
-          name: 'eSignature Product Brief (1).docx',
-          form_fields: [{
-            api_id: 'nameId',
-            name: 'name',
-            x: 100,
-            y: 500,
-            height:40,
-            width: 120,
-            page: 1,
-            signer: 1,
-            type: 'text',
-          },{
-            api_id: 'titleId',
-            name: 'title',
-            x: 500,
-            y: 500,
-            height:40,
-            width: 120,
-            page: 1,
-            signer: 1,
-            type: 'text',
-          }]
-        }
-      ]
+    files: ['sample.pdf'],
+    form_fields_per_document: [{
+      api_id: 'nameId',
+      name: 'name',
+      x: 100,
+      y: 500,
+      height:40,
+      width: 120,
+      page: 1,
+      signer: 1,
+      type: 'text',
+    },{
+      api_id: 'titleId',
+      name: 'title',
+      x: 500,
+      y: 500,
+      height:40,
+      width: 120,
+      page: 1,
+      signer: 1,
+      type: 'text',
+    }]
     };
       
 
